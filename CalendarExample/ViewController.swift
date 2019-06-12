@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var outputLabel: UILabel!
 
     private let currentCalendar = Calendar.current
-    private var autoupdatingCalendar = Calendar.autoupdatingCurrent
+    private let autoupdatingCalendar = Calendar.autoupdatingCurrent
 
     @IBAction func onTouchCalendarCurrent(_ sender: Any) {
         displayCalendarInfo(from: currentCalendar)
