@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalendarExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJE-cq-CHK">
+                                <rect key="frame" x="20" y="118" width="374" height="30"/>
+                                <state key="normal" title="Calendar current"/>
+                                <connections>
+                                    <action selector="onTouchCalendarCurrent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gqq-Ai-Nqd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1o-12-Gu2">
+                                <rect key="frame" x="20" y="181" width="374" height="30"/>
+                                <state key="normal" title="Calendar autoupdatingCurrent"/>
+                                <connections>
+                                    <action selector="onTouchCalendarAutoupdatingCurrent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xto-Ju-BdW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PID-vX-JXc">
+                                <rect key="frame" x="20" y="453" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PID-vX-JXc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="9qh-bX-wqc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qJE-cq-CHK" secondAttribute="trailing" constant="20" id="DfW-BR-lHw"/>
+                            <constraint firstItem="j1o-12-Gu2" firstAttribute="top" secondItem="qJE-cq-CHK" secondAttribute="bottom" constant="33" id="DgC-9w-lHy"/>
+                            <constraint firstItem="qJE-cq-CHK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="g0l-TN-fQO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="j1o-12-Gu2" secondAttribute="trailing" constant="20" id="kWt-fu-mZg"/>
+                            <constraint firstItem="j1o-12-Gu2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="pbj-On-8uU"/>
+                            <constraint firstItem="qJE-cq-CHK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="74" id="sKo-uA-DTo"/>
+                            <constraint firstItem="PID-vX-JXc" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="uw0-0q-fQU"/>
+                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="PID-vX-JXc" secondAttribute="trailing" constant="20" id="x1A-dD-NeU"/>
+                            <constraint firstItem="PID-vX-JXc" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zMU-xg-56S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="outputLabel" destination="PID-vX-JXc" id="iar-gr-go8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
